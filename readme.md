@@ -15,7 +15,6 @@ The model represents a simplified railway bridge structure composed of primary l
 * Model a bridge-type steel structure
 * Understand member alignment and spatial coordination
 * Apply and evaluate steel connections
-* Prepare the model for export and visualization (STL)
 
 ---
 
@@ -53,40 +52,6 @@ Advance Steel objects are intelligent and editable, which is useful for detailin
 
 Connections (macros) simplify modeling but generate complex geometry that may not always translate cleanly into other formats.
 
-### 4. STL Export Workflow
-
-STL export requires watertight solid geometry. Since Advance Steel uses parametric objects, conversion is necessary before export.
-
-### Conversion process used:
-
-```id="k29f1a"
-ASTEXPLODE
-AECTOACAD
-CONVTOSOLID
-STLOUT
-```
-
-This workflow:
-
-* Removes parametric properties
-* Converts elements into standard AutoCAD solids
-* Enables successful STL export
-
----
-
-## Challenges Encountered
-
-* STL export errors due to non-solid geometry
-* Complex connection elements breaking watertight conditions
-* Managing object conversion without corrupting geometry
-
----
-
-## Solutions
-
-* Fully exploded Advance Steel objects
-* Converted all elements to ACIS solids
-* Simplified or excluded problematic connection details where necessary
 
 ---
 
@@ -102,14 +67,11 @@ This workflow:
 * Add detailed bridge-specific components (deck system, bracing)
 * Improve connection realism
 * Generate fabrication and shop drawings
-* Perform basic structural validation
-* Optimize export workflow for interoperability
 
 ---
 
 ## Notes
 
 This project focuses on foundational skills in steel modeling within a bridge context.
-It highlights practical challenges when transitioning from parametric BIM-style modeling to mesh-based formats like STL.
 
 ---
