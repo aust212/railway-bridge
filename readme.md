@@ -62,6 +62,9 @@ Connections (macros) simplify modeling but generate complex geometry that may no
 
 ---
 
+## Preview
+![Preview](preview.png)
+
 ## Future Improvements
 
 * Add detailed bridge-specific components (deck system, bracing)
